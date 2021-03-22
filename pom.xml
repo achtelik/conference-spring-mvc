@@ -12,6 +12,7 @@
     <artifactId>conference</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>conference</name>
+    <packaging>war</packaging>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -21,6 +22,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- Servlet start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>

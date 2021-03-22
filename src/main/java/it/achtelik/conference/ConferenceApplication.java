@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class ConferenceApplication {
+public class ConferenceApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(ConferenceApplication.class, args);
