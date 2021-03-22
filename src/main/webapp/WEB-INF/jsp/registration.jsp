@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title><spring:message code="labels.registration"/></title>
 </head>
 <body>
 <h1>Registration</h1>
@@ -12,7 +12,7 @@
     <table>
         <tr>
             <td>
-                <div>Name:</div>
+                <div><spring:message code="labels.name"/>:</div>
             </td>
             <td>
                 <form:input path="name"/>
@@ -20,7 +20,8 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="Add Registration"/>
+                <spring:message code="buttons.save" var="buttons_save"/>
+                <input type="submit" value="${buttons_save}"/>
             </td>
         </tr>
     </table>

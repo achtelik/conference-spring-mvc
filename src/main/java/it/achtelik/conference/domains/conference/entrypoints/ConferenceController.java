@@ -8,7 +8,7 @@ import java.util.Map;
 @Controller
 public class ConferenceController {
 
-    @GetMapping("conference")
+    @GetMapping(value = {"/", "conference"})
     public String getConference(Map<String, Object> model) {
         model.put("conference_name", "Achtelik IT Summit");
         return "conference";

@@ -4,9 +4,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Conference Center</title>
+    <title><spring:message code="labels.conference_center"/></title>
 </head>
 <body>
-<h1>Welcome to ${conference_name}</h1>
+<h1><spring:message code="labels.welcome_to"/> ${conference_name}</h1>
+<a href="/registration">Registration</a>
 </body>
 </html>

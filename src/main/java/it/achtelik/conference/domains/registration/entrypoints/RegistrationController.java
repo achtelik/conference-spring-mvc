@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Map;
-
 @Controller
 public class RegistrationController {
 
@@ -18,6 +16,6 @@ public class RegistrationController {
     @PostMapping("registration")
     public String postRegistration(@ModelAttribute("registrationDto") RegistrationDto registrationDto) {
         System.out.println(String.format("Registraion: %s", registrationDto.getName()));
-        return "registration";
+        return "redirect:registration";
     }
 }
