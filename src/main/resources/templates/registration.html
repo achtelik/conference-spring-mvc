@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      th:with="lang=${#locale.language}" th:lang="${lang}">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/registration.css">
     <title th:text="#{labels.registration}"></title>
 </head>
 <body>
 <h1>Registration</h1>
 <form action="#" th:action="@{/registration}" th:object="${registrationDto}" method="post">
+    <div id="error_container">
+        <div th:each="err : ${#fields.errors('*')}" th:text="${err}"/>
+    </div>
     <table>
         <tr>
             <td>
